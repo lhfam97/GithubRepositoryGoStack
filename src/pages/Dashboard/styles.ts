@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import { shade } from 'polished';
 // Template literals
 
-
 interface FormProps {
   hasError: boolean;
 }
@@ -18,17 +17,20 @@ export const Form = styled.form<FormProps>`
   margin-top: 40px;
   max-width: 700px;
   display: flex;
- 
+
   input {
     flex: 1;
     height: 70px;
     padding: 0 24px;
     border: 0;
-    color:#3A3A3A;
+    color: #3a3a3a;
     border-radius: 5px 0 0 5px;
     border: 2px solid #fff;
-    ${(props) => props.hasError && css`
-    border-color:#c53030;`}
+    ${(props) =>
+      props.hasError &&
+      css`
+        border-color: #c53030;
+      `}
 
     &::placeholder {
       color: #a8a8b3;
@@ -92,7 +94,6 @@ export const Repositories = styled.div`
   }
 `;
 export const Error = styled.span`
-    display:block;
-    color: #c53030;
-`
-  ;
+  display: block;
+  color: #c53030;
+`;
